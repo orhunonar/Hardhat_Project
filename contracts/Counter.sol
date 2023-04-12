@@ -9,18 +9,15 @@ contract Counter{
 
     function add(uint256 x, uint256 y) public {
         uint256 result = x + y;
-        require(result >= x, "Integer overflow");
         total = result;
     }
 
     function subtract(uint256 x, uint256 y) public {
-        require(y <= x, "Subtraction result would be negative");
         subtracted = x - y;
     }
 
     function multiply(uint256 x, uint256 y) public {
         uint256 result = x * y;
-        require(result / x == y, "Integer overflow");
         multiplied = result;
     }
 
